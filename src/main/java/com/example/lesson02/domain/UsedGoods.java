@@ -1,6 +1,6 @@
 package com.example.lesson02.domain;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class UsedGoods {
 	private int id;
@@ -9,8 +9,8 @@ public class UsedGoods {
 	private String description;
 	private int price;
 	private String pictureUrl;
-	private LocalTime createdAt;
-	private LocalTime updatedAt;
+	private LocalDateTime createdAt;
+	private LocalDateTime updatedAt;
 	public int getId() {
 		return id;
 	}
@@ -47,16 +47,17 @@ public class UsedGoods {
 	public void setPictureUrl(String pictureUrl) {
 		this.pictureUrl = pictureUrl;
 	}
-	public LocalTime getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
-	public void setCreatedAt(LocalTime createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
-	public LocalTime getUpdatedAt() {
+	public LocalDateTime getUpdatedAt() {
 		return updatedAt;
 	}
-	public void setUpdatedAt(LocalTime updatedAt) {
+	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+
 }
