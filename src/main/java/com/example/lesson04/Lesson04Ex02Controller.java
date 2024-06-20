@@ -29,12 +29,14 @@ public class Lesson04Ex02Controller {
 	@PostMapping("/add-student")
 	public String addStudent(
 			@ModelAttribute Student student, Model model) { //@ModelAttribute -생략 가능
-		//DB insert
-			studentBO.addStudent(student);
-		//DB Select => 방금 가입된 학생
-
-		//Model에 데이터 담기
 		
+		//DB insert
+		studentBO.addStudent(student);
+		//DB Select => 방금 가입된 학생
+		int id = student.getId();
+		Student latestStudent = studentBO.getStudentById(id);
+		//Model에 데이터 담기
+		model.addAttribute("student",latestStudent);
 		//화면이동
 		return "lesson04/afterAddStudent";
 	}
