@@ -17,4 +17,6 @@ public interface UserMapper {
 	//input
 	//output: User
 	public User selectLatestUser();
+	
+	public boolean isDuplicationByName(String name);
 }
